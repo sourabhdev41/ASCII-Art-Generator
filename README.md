@@ -1,82 +1,44 @@
-# ASCII Art Generator Using Pure Python
+# Image to ASCII Art Using Python
 
-A lightweight ASCII Art Generator built using only core Python concepts.
-No external libraries, no dependencies, just logic, loops, and condition based design.
+Project Purpose
 
-This project demonstrates how structured visual output can be created inside a terminal by treating it as a two dimensional grid and controlling each character position through code.
+This project demonstrates how an image-like structure can be represented using ASCII characters through pure Python logic .
 
-Features
-	•	Pure Python implementation
-	•	No third-party libraries required
-	•	Fully customizable output
-	•	Uses only loops and conditional statements
-	•	Works in any terminal where Python is installed
+Instead of relying on image processing libraries, the program manually constructs an ASCII output by mapping row and column positions to specific characters using nested loops and conditional statements .
 
-How It Works
-
-The terminal is treated like a grid made of rows and columns.
-	•	Each row represents vertical movement
-	•	Each column represents horizontal movement
-
-Nested loops iterate through this grid.
-At every position, conditions decide which character should be printed.
-
-If a condition matches, a symbol like @, #, % is printed.
-If not, a blank space is printed.
-
-Many small logical decisions together form a complete ASCII image.
-
-# Example Logic
-
-for row in range(height):
-    for col in range(width):
-        if row == 5 and 10 <= col <= 15:
-            print("@", end="")
-        else:
-            print(" ", end="")
-    print()
-
-    This simple logic scales to complex designs when expanded across multiple rows and conditions.
+The main focus of this project is to strengthen core programming concepts such as :
+	•	Understanding nested loops
+	•	Practicing if / elif conditional logic
+	•	Learning pattern-based thinking
+	•	Creating visual output in the console
 
 
-    Why This Project
+How the Code Works
 
-Most ASCII art generators rely on libraries that hide the logic.
+The ASCII image is treated as a two-dimensional grid with a fixed height and width .
+	•	The program uses two nested for loops to iterate through each row and column
+	•	For every (row, column) position, a character is selected using if and elif conditions
+	•	Different ASCII characters like . : - = + * # % are used to represent different visual intensities
+	•	print(char, end='') is used to print characters on the same line
+	•	After finishing one row, a new line is printed to move to the next row
 
-This project focuses on:
-	•	understanding how output is structured
-	•	improving logical and spatial thinking
-	•	gaining full control over visual layout
-
-It is ideal for learners who want to strengthen fundamentals instead of relying on abstractions.
-
-
-Use Cases
-	•	Terminal based applications
-	•	Learning programming fundamentals
-	•	Visual debugging output
-	•	Educational demonstrations
-	•	Retro or minimal text based projects
+By repeating this logic for all rows and columns, a complete ASCII image is generated directly in the terminal .
 
 
-Getting Started
-	1.	Install Python (3.x recommended)
-	2.	Clone this repository
-	3.	Run the Python file in your terminal
-	4.	Modify conditions to create your own designs
-
-
-Customization
-
-You can customize:
-	•	canvas size (rows and columns)
-	•	characters used
-	•	complexity of patterns
-	•	spacing and density
-
-Every change directly affects the visual output.
-
+How to Run the Program
 
 Requirements
-	•	Python 3.x
-No additional packages required.
+	•	Python 3.x installed on your system
+
+Steps to Run
+	1.	Clone or download this repository
+	2.	Open a terminal in the project directory
+	3.	Run the following command :
+
+python ascii_art.py
+
+The ASCII output will be displayed directly in the terminal .
+
+
+
+This project is ideal for beginners who want to understand how simple logic can create structured visual output without using any external libraries .
